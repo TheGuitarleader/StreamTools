@@ -9,11 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Styles\" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\StreamTools\StreamTools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Classes\" />
   </ItemGroup>
 
 </Project>

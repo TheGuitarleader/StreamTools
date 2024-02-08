@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="TextColor">#bdbdbd</Color>
+    <Color x:Key="TextColorBlack">#181818</Color>
+    <Color x:Key="HeaderColor">#131313</Color>
+    <Color x:Key="WindowColor">#181818</Color>
+    <Color x:Key="DarkerWindowColor">#0f0f0f</Color>
+    <Color x:Key="SidebarColor">#242424</Color>
+    <Color x:Key="BodyColor">#383838</Color>
+    <Color x:Key="CtrlHoverColor">#464646</Color>
+    <Color x:Key="CtrlPressColor">#2d2d2d</Color>
+    <Color x:Key="DarkCtrlPressColor">#1d1d1d</Color>
+
+    <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}"/>
+    <SolidColorBrush x:Key="TextBrushBlack" Color="{StaticResource TextColorBlack}"/>
+    <SolidColorBrush x:Key="HeaderBrush" Color="{StaticResource HeaderColor}"/>
+    <SolidColorBrush x:Key="WindowBrush" Color="{StaticResource WindowColor}"/>
+    <SolidColorBrush x:Key="DarkerWindowBrush" Color="{StaticResource DarkerWindowColor}"/>
+    <SolidColorBrush x:Key="SideBarBrush" Color="{StaticResource SidebarColor}"/>
+    <SolidColorBrush x:Key="BodyBrush" Color="{StaticResource BodyColor}"/>
+    <SolidColorBrush x:Key="CtrlHoverBrush" Color="{StaticResource CtrlHoverColor}"/>
+    <SolidColorBrush x:Key="CtrlPressBrush" Color="{StaticResource CtrlPressColor}"/>
+    <SolidColorBrush x:Key="DarkCtrlPressBrush" Color="{StaticResource CtrlPressColor}"/>
+    
+</ResourceDictionary>
