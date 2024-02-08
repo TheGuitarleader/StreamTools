@@ -18,8 +18,9 @@ namespace StreamTools.Audio
         private WaveOutEvent? _player;
         private AudioFileReader? _source;
 
-        public event EventHandler<WaveFormUpdateEventArgs> WaveFormUpdate;
+        public event EventHandler<WaveFormUpdateEventArgs>? WaveFormUpdate;
         public WasapiLoopbackCapture Wasapi { get; }
+        public TimeSpan Duration { get; private set; }
 
         public AudioPlayerState PlaybackState
         {
@@ -62,7 +63,6 @@ namespace StreamTools.Audio
 
                 long position = _player.GetPosition();
                 TimeSpan ts = TimeSpan.FromMilliseconds(position * 1000 / _player.OutputWaveFormat.BitsPerSample / _player.OutputWaveFormat.Channels * 8 / _player.OutputWaveFormat.SampleRate);
-
                 WaveFormUpdate?.Invoke(this, new WaveFormUpdateEventArgs(channels.ToArray(), ts));
             }
         }
@@ -70,6 +70,8 @@ namespace StreamTools.Audio
         public void Load(string filename)
         {
             _source = new AudioFileReader(filename);
+            Duration = _source.TotalTime;
+
             _player = new WaveOutEvent();
             _player.Init(_source);
         }
