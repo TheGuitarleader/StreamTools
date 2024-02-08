@@ -4,10 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StreamToolsUI"
+        xmlns:Controls="clr-namespace:StreamToolsUI.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="MainWindow_Loaded">
+        WindowState="Normal"
+        UseLayoutRounding="True" 
+        ResizeMode="CanResize"
+        Title="MainWindow" 
+        Width="800" 
+        Height="450"
+        Style="{DynamicResource PrimaryWindowStyle}" 
+        Loaded="MainWindow_Loaded">
 
-    <Grid>
-        <Button x:Name="button" Content="Play song" HorizontalAlignment="Left" Margin="95,124,0,0" VerticalAlignment="Top" Click="button_Click"/>
-    </Grid>
+    <DockPanel x:Name="HomePage" Background="{StaticResource WindowBrush}">
+        <UniformGrid Rows="2" Columns="4" Margin="10">
+            <Controls:PageShortcutBtn ShortcutName="Count Down Timer"/>
+            <Controls:PageShortcutBtn ShortcutName="Gameplay"/>
+            <Controls:PageShortcutBtn ShortcutName="Music"/>
+            <Controls:PageShortcutBtn ShortcutName="Stream Health"/>
+
+            <Controls:PageShortcutBtn ShortcutName=""/>
+            <Controls:PageShortcutBtn ShortcutName=""/>
+            <Controls:PageShortcutBtn ShortcutName=""/>
+            <Controls:PageShortcutBtn ShortcutName=""/>
+        </UniformGrid>
+    </DockPanel>
 </Window>

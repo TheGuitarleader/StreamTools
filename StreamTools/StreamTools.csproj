@@ -13,6 +13,7 @@
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Database\" />
+    <Folder Include="Logging\" />
   </ItemGroup>
 
 </Project>

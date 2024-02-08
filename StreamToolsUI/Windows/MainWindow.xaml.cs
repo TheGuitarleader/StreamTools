@@ -28,28 +28,5 @@ namespace StreamToolsUI.Windows
         {
 
         }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
-            
-            if((bool)ofd.ShowDialog())
-            {
-                MMDeviceEnumerator enumerator = new();
-                MMDeviceCollection devices = enumerator.EnumerateAudioEndPoints(DataFlow.Render, DeviceState.Active);
-
-                AudioPlayer player = new(devices[8]);
-                player.WaveFormUpdate += Player_WaveFormUpdate;
-
-                player.Load(ofd.FileName);
-                player.Play();
-            }
-        }
-
-        private void Player_WaveFormUpdate(object? sender, StreamTools.Events.WaveFormUpdateEventArgs e)
-        {
-            Console.WriteLine(e.CurrentTime.ToString());
-        }
     }
 }
