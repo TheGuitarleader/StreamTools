@@ -28,5 +28,10 @@ namespace StreamToolsUI.Windows
         {
 
         }
+
+        private void CountDownTimer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -17,12 +17,11 @@
 
     <DockPanel x:Name="HomePage" Background="{StaticResource WindowBrush}">
         <UniformGrid Rows="2" Columns="4" Margin="10">
-            <Controls:PageShortcutBtn ShortcutName="Count Down Timer"/>
-            <Controls:PageShortcutBtn ShortcutName="Gameplay"/>
-            <Controls:PageShortcutBtn ShortcutName="Music"/>
+            <Controls:PageShortcutBtn ShortcutName="Count Down Timer" Click="CountDownTimer_Click"/>
+            <Controls:PageShortcutBtn ShortcutName="Gameplay Sorting"/>
+            <Controls:PageShortcutBtn ShortcutName="Music Player"/>
             <Controls:PageShortcutBtn ShortcutName="Stream Health"/>
-
-            <Controls:PageShortcutBtn ShortcutName=""/>
+            <Controls:PageShortcutBtn ShortcutName="Chatbot"/>
             <Controls:PageShortcutBtn ShortcutName=""/>
             <Controls:PageShortcutBtn ShortcutName=""/>
             <Controls:PageShortcutBtn ShortcutName=""/>

@@ -6,12 +6,13 @@
              xmlns:local="clr-namespace:StreamToolsUI.Controls"
              mc:Ignorable="d" 
              MinWidth="50" MinHeight="80" HorizontalAlignment="Center" VerticalAlignment="Center">
-    <Grid Width="auto">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
-        <Border Grid.Row="0" Background="Blue" CornerRadius="5" Margin="5" Width="75" Height="75"/>
-        <Label Content="{Binding ShortcutName, ElementName=userControl}" Grid.Row="1" Width="NaN" Foreground="{StaticResource TextBrush}" FontSize="11" HorizontalAlignment="Center"/>
-    </Grid>
+
+    <Button x:Name="PageBtn" Background="{x:Null}">
+        <Button.Content>
+            <StackPanel>
+                <Border Grid.Row="0" Background="Blue" CornerRadius="5" Margin="5" Width="75" Height="75"/>
+                <Label Content="{Binding ShortcutName, ElementName=userControl}" Grid.Row="1" Width="NaN" Foreground="{StaticResource TextBrush}" FontSize="11" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button.Content>
+    </Button>
 </UserControl>

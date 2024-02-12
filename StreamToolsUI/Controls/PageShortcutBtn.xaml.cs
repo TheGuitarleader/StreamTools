@@ -25,6 +25,12 @@ namespace StreamToolsUI.Controls
             InitializeComponent();
         }
 
+        public event RoutedEventHandler Click
+        {
+            add { PageBtn.Click += value; }
+            remove { PageBtn.Click -= value; }
+        }
+
         public static readonly DependencyProperty ShortcutNameProperty = DependencyProperty.Register("ShortcutName", typeof(string), typeof(PageShortcutBtn), new PropertyMetadata());
         public string ShortcutName
         {
